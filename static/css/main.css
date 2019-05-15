@@ -1,0 +1,8 @@
+.row {
+  margin-top: 100px;
+}
+
+form > input[type="submit"] {
+  width: 100%;
+  margin-top: 20px;
+}
