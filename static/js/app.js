@@ -29,8 +29,8 @@ function searchCity() {
     console.log(res);
 
     $('#city_name').text(`${res.name}, ${res.sys.country}`);
-    $('#high').html(`${convertDegrees(res.main.temp_max)} F`);
-    $('#low').html(`${convertDegrees(res.main.temp_min)} F`);
+    $('#high').html(`${convertDegrees(res.main.temp_max).toFixed(0)}&#x2109`);
+    $('#low').html(`${convertDegrees(res.main.temp_min).toFixed(0)}&#x2109`);
     $('#humidity').text(`${res.main.humidity}%`)
     $('#forecast').text(res.weather[0].description)
   });
