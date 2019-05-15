@@ -1,9 +1,9 @@
 // all imports at top, import config to access api key
-
+import Config from '../../config.js'
 
 
 // create an instance of the Config class
-
+let config = New Config();
 
 
 // render the navbar into the header
@@ -23,7 +23,7 @@ function searchCity() {
   console.log(city);
 
   // TODO: add AJAX call to weather API and display info
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`;
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${config.getKey()}`;
 
   $('#weather-info').css('display', 'block');
 }
