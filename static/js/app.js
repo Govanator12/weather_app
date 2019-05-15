@@ -23,6 +23,9 @@ function searchCity() {
   console.log(city);
 
   // TODO: add AJAX call to weather API and display info
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`;
+
+  $('#weather-info').css('display', 'block');
 }
 
 
@@ -34,3 +37,4 @@ $('#submit-btn').click(function(e) {
 
 
 // make search information not appear until they submit a city
+$('#weather-info').css('display', 'none');
