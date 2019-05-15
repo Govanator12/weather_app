@@ -8,7 +8,7 @@
 
 // render the navbar into the header
 $.get('../../components/header.html', function(res) {
-  $('#nav').html(res)
+  $('#nav').html(res);
 });
 
 
@@ -18,11 +18,19 @@ $.get('../../components/header.html', function(res) {
 
 
 // create a function that logs the city entered in the form
+function searchCity() {
+  let city = $('#city_search').val();
+  console.log(city);
 
+  // TODO: add AJAX call to weather API and display info
+}
 
 
 // check to see if the submit button is pressed, if it is, stop the event from refreshing the page, and call searchCity()
-
+$('#submit-btn').click(function(e) {
+  e.preventDefault();
+  searchCity();
+});
 
 
 // make search information not appear until they submit a city
